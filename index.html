@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echa & Ma'ruf</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="flip/flip.min.css" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @import url('https://cdn.jsdelivr.net/npm/@tailwindcss/scrollbar');
+
+    /* Tambahkan kustomisasi scrollbar */
+    /* Contoh: mengubah warna track scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-[url('assets/image/background.webp')] scroll-smooth mx-auto" style="scroll-behavior: smooth;">
+  <div class=" relative bg-[url('assets/image/background.webp')] " id="welcome">
+    <div class="lg:w-[500px] mx-auto md:w-[500px] relative">
+      <img src="assets/video/welcome.gif" class="block" alt="Gambar Bergerak">
+      <div class="absolute left-0 right-0 top-[67%] lg:top-[63%] md:top-[65%] flex justify-center">
+        <button class="bottom-20 flex items-center bg-slate-500 text-white font-semibold font-sans px-3 py-3 rounded-lg"
+          id="tes">
+          <img src="assets/icon/1.png" alt="" class="block w-7 me-2"><span>Open
+            Invtation</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden relative mx-auto lg:w-[500px] md:w-[600px] overflow-x-hidden" id="content">
+    <audio id="myAudio" controls class="hidden">
+      <source src="assets/music/backsound.mp3" type="audio/mpeg">
+    </audio>
+    <video autoplay muted preload="auto" loop id="satu">
+      <source src="assets/video/1.mp4" type="video/mp4" class="w-full">
+    </video>
+
+
+    <video autoplay muted preload="auto" loop id="dua">
+      <source src="assets/video/2.mp4" type="video/mp4" class="w-full">
+    </video>
+
+
+    <video autoplay muted preload="auto" loop id="tiga">
+      <source src="assets/video/3.mp4" type="video/mp4" class="w-full">
+    </video>
+
+
+    <video autoplay muted preload="auto" loop id="empat">
+      <source src="assets/video/4.mp4" type="video/mp4" class="w-full">
+    </video>
+
+
+    <video autoplay muted preload="auto" loop id="lima">
+      <source src="assets/video/5.mp4" type="video/mp4" class="w-full">
+    </video>
+
+
+    <video autoplay muted preload="auto" loop id="enam">
+      <source src="assets/video/7.mp4" type="video/mp4" class="w-full">
+    </video>
+
+    <div
+      class="lg:h-96 h-72 md:h-96 sm:h-96 overflow-x-hidden bg-[url('assets/image/aaaaa.png')] bg-cover bg-no-repeat lg:bg-cover md:bg-cover lg:bg-center md:bg-top bg-center flex items-end justify-center"
+      id="delapan">
+      <div class="flex pb-10  gap-3">
+        <div class="flex-col items-center justify-center rounded-lg  bg-slate-500 py-2 px-3 text-white">
+          <div class="waktu_hari text-4xl font-bold"></div>
+          <div class="hari text-center">Hari</div>
+        </div>
+
+        <div class="flex-col items-center justify-cente rounded-lg r bg-slate-500 py-2 px-3 text-white">
+          <div class="waktu_Jam text-4xl font-bold"></div>
+          <div class="Jam text-center">Jam</div>
+        </div>
+
+        <div class="flex-col items-center justify-center  rounded-lg bg-slate-500 py-2 px-3 text-white">
+          <div class="waktu_Menit text-4xl font-bold"></div>
+          <div class="Menit text-center">Menit</div>
+        </div>
+
+        <div class="flex-col items-center justify-center  rounded-lg bg-slate-500 py-2 px-3 text-white">
+          <div class="waktu_Detik text-4xl font-bold"></div>
+          <div class="Detik text-center">Detik</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="bg-white lg:w-[500px] md:w-[600px] overflow-x-hidden" >
+            <div class="doa text-2xl text-center font-bold font-sans mt-4">Pesan & Doa</div>
+
+            <div class="message py-2 w-96 mx-auto px-12 md:px-3">
+                <form action="http://localhost/BelajarPython/getPesan.php" method="post" class=" mx-auto form  block">
+                    <div class="input-nama w-full">
+                        <label for="nama"
+                            class="block w-full  lg:text-lg md:text-lg lg:mt-3 md:mt-3 mt-2 text-base">Nama</label>
+                        <input
+                            class="block w-full outline-none focus:ring-4 focus:ring-opacity-10 rounded-lg focus:ring-slate-500 py-2 px-3 border "
+                            type="text" name="nama" id="nama" required placeholder="Masukan nama">
+                    </div>
+                    <div class="input-pesan w-full mt-2">
+                        <label for="pesan"
+                            class="block w-full lg:text-lg md:text-lg lg:mt-3 md:mt-3 mt-2 text-base">Pesan &
+                            Doa</label>
+                        <textarea name="pesan" id="pesan" required rows="4"
+                            class="w-full block outline-none focus:ring-4 focus:ring-opacity-10 rounded-lg py-2 px-3 border focus:ring-slate-500"
+                            placeholder="masukan pesan"></textarea>
+                    </div>
+                    <button type="submit" name="simpan_pesan" id="kirim"
+                        class="w-full bg-slate-500 text-white py-2 rounded-md mt-3 text-center">Kirim</button>
+                </form>
+
+                <div class=" message_people mt-5 h-72 overflow-y-auto ">
+
+                    <div class=" border-b-2 py-2 px-3 flex flex-col pesan">
+                       
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div> -->
+
+    <video autoplay muted preload="auto" loop id="tujuh">
+      <source src="assets/video/6.mp4" type="video/mp4" class="w-full">
+    </video>
+    <video autoplay muted preload="auto" loop id="sembilan">
+      <source src="assets/video/8.mp4" type="video/mp4" class="w-full">
+    </video>
+
+
+
+    <div class="fixed flex justify-center text-white items-center bottom-0  left-0 right-0">
+
+      <a href="#satu" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/1.png" alt="" class="block w-10">
+      </a>
+      <a href="#dua" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/2.png" alt="" class="block w-10">
+      </a>
+      <a href="#tiga" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/3.png" alt="" class="block w-10">
+      </a>
+      <a href="#empat" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/4.png" alt="" class="block w-10">
+      </a>
+      <a href="#lima" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/5.png" alt="" class="block w-10">
+      </a>
+      <a href="#enam" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/6.png" alt="" class="block w-10">
+      </a>
+      <a href="#delapan" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/8.png" alt="" class="block w-10">
+      </a>
+      <a href="#tujuh" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/7.png" alt="" class="block w-10">
+      </a>
+      <a href="#sembilan" class="p-2 lg:p-3 block bg-slate-500">
+        <img src="assets/icon/9.png" alt="" class="block w-10">
+      </a>
+
+    </div>
+  </div>
+  <script src="flip/flip.min.js"></script>
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
